@@ -22,26 +22,24 @@ class Main extends React.Component {
 
    SelecttionHornFilter=(event)=>{
     let filterToNumberOfHorns = parseInt( event.target.value);
-
-    if (filterToNumberOfHorns === '')
+    let filterData =[];
+    if (filterToNumberOfHorns === 0)
     {
-        this.setState({ data : DataPost });
+        filterData = DataPost;
     } else{
        
-      let filterData =DataPost.filter(item=>{
+        filterData =DataPost.filter(item=>{
         return item.horns === filterToNumberOfHorns;
       });
+    }
 
-      
-
-      this.setState({
+    this.setState({
         filterToNumberOfHorns : filterToNumberOfHorns,
         data:filterData
 
       });
       console.log(filterToNumberOfHorns);
       console.log(this.state.data);
-    }
       
    }
 
