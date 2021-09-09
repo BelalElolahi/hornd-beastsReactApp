@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 import {
    Form,
@@ -7,7 +7,7 @@ import {
 } from 'react-bootstrap';
 
 
-export class HornForm extends Component {
+export class HornForm extends React.Component {
 
 
 
@@ -19,8 +19,7 @@ export class HornForm extends Component {
                 <Form onSubmit={this.props.handlesubmit}>
                     <Form.Group as={Col} controlId="formGridState" >
                         <Form.Select  onChange ={(event) => {this.props.SelecttionHornFilter(event);}}>
-                        <option value="">select...</option> 
-                           
+                            <option value="">select...</option> 
                             <option value="1"> One horn</option> 
                             <option value="2"> two horns</option> 
                             <option value="3"> three horns</option> 

@@ -1,4 +1,4 @@
-import { React, Component } from "react";
+import {React,Component} from "react";
 import {
     Button,
     Card,
@@ -41,13 +41,13 @@ class HornedBeasts extends Component {
                             <Card.Title>{this.props.title}</Card.Title>
                             <Card.Text>
                                 {this.props.description}
-                                {this.props.keyword}
-                                {this.props.horns}
+                                <h3>{this.props.keyword}</h3>
+                                <h3> Horns{this.props.horns}</h3>
                                 <h3>favorites Image :{this.state.favorites}</h3>
                             </Card.Text>
                             <Button onClick={
                                 () => {
-                                    this.props.handelOpen(this.props.title ,this.props.imgUrl, this.props.description);
+                                    this.props.handelOpen(this.props.title, this.props.imgUrl, this.props.description);
                                 }
                             } variant="primary" >
 
@@ -57,7 +57,7 @@ class HornedBeasts extends Component {
                         </Card.Body>
                     </Card>
                 </Col>
-               
+
             </>
         );
     }
