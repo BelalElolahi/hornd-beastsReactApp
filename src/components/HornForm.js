@@ -24,6 +24,7 @@ export class HornForm extends Component {
                             <option value="3"> 3 horns</option> 
                             <option value="100"> 100 horns</option> 
                         </Form.Select>
+                        
                     </Form.Group>
                     
                 </Form>
